@@ -6,6 +6,11 @@ WORKDIR /root
 
 RUN curl -sS https://getcomposer.org/installer | php
 
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
+
 WORKDIR /src
 
-CMD php /root/composer.phar install
+ENTRYPOINT ["/run.sh"]
+
+CMD install
