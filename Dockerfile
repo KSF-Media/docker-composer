@@ -1,6 +1,6 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
-RUN apt-get update; apt-get -y install php5 php5-cli curl
+RUN apt-get update; apt-get -y install php7.2 php7.2-cli curl git
 
 WORKDIR /root
 
