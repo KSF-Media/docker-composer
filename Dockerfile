@@ -1,6 +1,8 @@
 FROM ubuntu:18.04
 
-RUN apt-get update; apt-get -y install php7.2 php7.2-cli curl git
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt update; apt-get -y install php7.2 php7.2-cli curl git
 
 WORKDIR /root
 
