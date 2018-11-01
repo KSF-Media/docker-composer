@@ -2,7 +2,10 @@ FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt update; apt-get -y install php7.2 php7.2-cli curl git
+RUN apt update; apt install -y php7.2-cli curl git unzip
+RUN apt install -y php7.2-curl php7.2-mbstring php7.2-zip \
+                   mcrypt php-libsodium php7.2-gmp
+
 
 WORKDIR /root
 
